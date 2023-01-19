@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+body{
+    width: 100%;
+    background: #f0f2f5;
+}
+form{
+    background: #fff;
+    position: absolute;
+    width: 320px;
+    height: 270px;
+    padding: 20px 5px 20px 5px;
+    margin: 180px 800px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);;
+}
+input[type="text"], input[type="password"]{
+    display: block;
+    background-color: #fff;
+    margin: auto;
+    border: 1.5px solid rgb(200, 200, 200);
+    width: 200px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-family: 'Segoe UI';
+    font-size: 15px;
+
+}
+button{
+    border: none;
+    background: #1877f2;
+    color: white;
+    margin: auto;
+    width: 283px;
+    display: block;
+    border-radius: 5px;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+.f-pws{
+    display: block;
+    width: 200px;
+    margin: auto;
+    color: #1877f2;
+    padding-left: 80px;
+    font-family: 'Segoe UI';
+    font-weight: 400;
+
+}
+.line{
+    border-top: 1px solid #222;
+    opacity: 0.2;
+}
+.btn2{
+    width: 180px;
+    font-size: 14px;
+    background-color: #42b72a;
+    text-align: center;
+    cursor: pointer;
+    
+
+}
+.btn2 a{
+    color: rgb(255, 255, 255);
+
+
+}
+.btn2:hover{
+    background:linear-gradient(to bottom, #117211, #00a400 )
+
+}
+
+.sub-link {
+    width: 270px;
+    position: relative;
+    color: black;
+    padding: 26px 834px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    
+    margin-top: 120px;
+}
+.sub-link a{
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+.f-container{
+    width: 350px;
+    margin-left: 220px;
+    margin-top: 30vh;
+    font-family: 'Segoe UI';
+    display: inline-block;
+}
+.f-container  img{
+    width: 300px;
+    height: 106px;
+    margin: -28px;
+    padding-bottom: 10px;
+}
+.f-container h2{
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 500px;
+}
