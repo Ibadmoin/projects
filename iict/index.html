@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Form</title>
+</head>
+<style>
+    body {
+        background-image: url(bg.webp);
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        color: #00f800;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 4px 0px 5px #00a400;
+
+    }
+
+    form {
+        width: 400px;
+        height: fit-content;
+        background-color: #000;
+        text-align: center;
+        box-shadow: rgba(0, 225, 0, 0.35) 10px -5px 15px;
+        margin-top: 50px;
+        border: 1px solid #00f800;
+
+    }
+
+    .control {
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .control label {
+        position: absolute;
+        top: 38px;
+        left: 15px;
+        color: #00a400;
+
+
+    }
+
+    .control input {
+        width: 80%;
+        /* height: 30px; */
+        padding: 10px 30px 5px 30px;
+        border: none;
+        border-bottom: 2px solid #00a400;
+        margin-top: 30px;
+        background-color: #000;
+        color: #fff;
+    }
+
+    .control input:focus {
+        outline: none;
+        border-bottom: 2px solid rgb(0, 255, 0);
+        color: #fff;
+    }
+
+    .control select {
+        width: 130px;
+        text-align: center;
+        border: 1px solid #00a400;
+        background: #000;
+        color: #fff;
+    }
+
+    .control select:focus {
+        outline: none;
+        background: #000;
+
+    }
+
+    select option:checked {
+        background-color: green;
+        color: white;
+    }
+
+    button {
+        width: 80px;
+        height: 30px;
+        background: #00f800;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #00a400;
+    }
+
+    .danger{
+        color: red;
+        font-family: poppins;
+        letter-spacing: 1px;
+        display: none;
+    }
+</style>
+
+<body>
+    <h1>Car Rental Registration</h1>
+
+    <!-- form section started -->
+    <form action="">
+        <div class="control f-name">
+            <label for="First-name"><i class="fa-solid fa-user"></i></label>
+            <input type="text" placeholder="First Name" required>
+        </div>
+        <div class="control l-name">
+            <label for="Last-name"><i class="fa-solid fa-user"></i></label>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+        <div class="control ">
+            <label for="Email"><i class="fa-solid fa-envelope"></i></label>
+            <input type="email" placeholder="Email address" name="email" required>
+        </div>
+        <div class="control ">
+            <label for="Ph-num"><i class="fa-solid fa-phone"></i></label>
+            <input type="number" placeholder="Phone Number" maxlength="13" required>
+        </div>
+        <div class="control ">
+            <label for="Cnic"><i class="fa-solid fa-id-card"></i></label>
+            <input type="number" placeholder="CNIC Number">
+        </div>
+        <div class="control ">
+            <label for="address"><i class="fa-solid fa-house"></i></label>
+            <input type="text" placeholder="Your Local Address">
+        </div>
+
+        <div class="control">
+            <select name="Cars" id="">
+                <option value="cars" selected disabled>Cars</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW 7 series</option>
+                <option value="Honda">Honda City</option>
+                <option value="Civic">Civic</option>
+                <option value="Kia">Kia</option>
+                <option value="Alto">Alto</option>
+                <option value="toyota">Toyota Corolla</option>
+            </select>
+        </div>
+
+        <div class="control">
+            <select name="Payment method" id="">
+                <option value="Payment" selected disabled>Payment Method</option>
+                <option value="visa">Visa</option>
+                <option value="Hbl">Habib bank limited</option>
+                <option value="Mb">Mezaan Bank</option>
+                <option value="Sindh bank">Sindh Bank</option>
+                <option value="bank Al-Habib">Bank Al-Habib</option>
+                <option value="EasyPaisa">EasyPaisa</option>
+            </select>
+        </div>
+
+            <div class="danger" id="danger">Invalid Email</div>
+
+        <div class="control">
+            <button onclick="buy()">Buy Now</button>
+        </div>
+
+
+
+
+
+
+
+    </form>
+
+
+    <script>
+        function buy() {
+
+            const email = document.getElementsByName('email')[0].value;
+            const danger = document.getElementById('danger');
+
+            if (email === '') {
+                danger.style.display = 'block';
+            } else if (!email.includes('@')) {
+                danger.style.display = 'block';
+                danger.innerText = 'Please enter a valid email address';
+            } else {
+                alert('APPLICATION Submitted WE will Contact you soon!');
+            }
+
+            setTimeout(() => {
+                danger.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/b4fc311639.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
